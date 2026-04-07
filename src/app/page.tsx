@@ -2,7 +2,8 @@
 
 import { useState, useRef, useCallback, useEffect, type FormEvent, type DragEvent, type ChangeEvent } from "react";
 
-const SUBMIT_URL = "/api/submit";
+const GOOGLE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbzM9ngzOZNjdLQpNBPOs9Cgb8hJ7SxpE9SmTz7DIOF632sJa1k26vSd1c4Dg3qu7XnV/exec";
 
 const REQUIRED_FIELDS = [
   "fullName",
@@ -184,13 +185,12 @@ export default function Home() {
         headshotType: headshot?.type || "",
       };
 
-      const res = await fetch(SUBMIT_URL, {
+      await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
+        mode: "no-cors",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-
-      if (!res.ok) throw new Error("Submission failed");
 
       setSubmitted(true);
     } catch {
