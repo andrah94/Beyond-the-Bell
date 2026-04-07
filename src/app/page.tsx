@@ -2,8 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect, type FormEvent, type DragEvent, type ChangeEvent } from "react";
 
-const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbzM9ngzOZNjdLQpNBPOs9Cgb8hJ7SxpE9SmTz7DIOF632sJa1k26vSd1c4Dg3qu7XnV/exec";
+const SUBMIT_URL = "/api/submit";
 
 const REQUIRED_FIELDS = [
   "fullName",
@@ -22,7 +21,6 @@ const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
 interface FormData {
   fullName: string;
   preferredName: string;
-  pronouns: string;
   title: string;
   school: string;
   years: string;
@@ -39,7 +37,6 @@ export default function Home() {
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
     preferredName: "",
-    pronouns: "",
     title: "",
     school: "",
     years: "",
@@ -187,12 +184,13 @@ export default function Home() {
         headshotType: headshot?.type || "",
       };
 
-      await fetch(GOOGLE_SCRIPT_URL, {
+      const res = await fetch(SUBMIT_URL, {
         method: "POST",
-        mode: "no-cors",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
+
+      if (!res.ok) throw new Error("Submission failed");
 
       setSubmitted(true);
     } catch {
@@ -280,15 +278,6 @@ export default function Home() {
                 type="text"
                 name="preferredName"
                 value={formData.preferredName}
-                onChange={handleChange}
-                className={inputClass()}
-              />
-            </Field>
-            <Field label="Pronouns">
-              <input
-                type="text"
-                name="pronouns"
-                value={formData.pronouns}
                 onChange={handleChange}
                 className={inputClass()}
               />
