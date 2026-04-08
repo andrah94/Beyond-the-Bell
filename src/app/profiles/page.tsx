@@ -33,7 +33,7 @@ const PARTICIPANTS: Participant[] = [
     phone: "4435967264",
     bio: "Jeremiah Thomas is a dedicated educator and graduate student in Transformational Educational Leadership at Towson University, where he will be graduating soon. He is committed to fostering inclusive, student-centered learning environments that support both academic success and personal growth. With experience working in diverse and urban school settings, Jeremiah prioritizes building strong relationships with students while maintaining high expectations and a classroom culture rooted in respect, accountability, and open-mindedness.\n\nHis teaching philosophy emphasizes collaboration, critical thinking, and real-world application. He designs engaging, standards-based instruction that encourages students to take ownership of their learning while strengthening their literacy and communication skills. Jeremiah is especially passionate about supporting middle school students during critical developmental years.\n\nJeremiah values God, family, and community, which guide both his personal life and professional practice. Outside the classroom, he is a devoted father who believes in leading by example and giving back to those around him. He strives to model integrity, resilience, and empathy, with the goal of inspiring students to become confident, responsible, and thoughtful individuals.",
     social: "LinkedIn - Jeremiah Thomas · X - @mrthomas0916",
-    headshot: "",
+    headshot: "/headshots/jeremiah-thomas.jpg",
   },
   {
     fullName: "Dr. William Blake",
