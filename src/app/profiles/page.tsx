@@ -46,7 +46,7 @@ const PARTICIPANTS: Participant[] = [
     phone: "2026741716",
     bio: "Dr. William L. Blake is an award-winning educator and school leader with over 20 years of experience serving students and communities across Washington, DC and Prince George\u2019s County Public Schools. He currently serves as the Assistant Principal of Bard High School Early College DC, where he leads the 9th Grade Academy, ensuring students are academically successful, connected to school, and prepared for what\u2019s next.\n\nDr. Blake\u2019s teaching and leadership philosophy centers on creating joyful, rigorous, and student-centered learning environments where every student feels seen, heard, and valued. He believes strong relationships, high expectations, and culturally responsive practices are essential to unlocking student potential and driving meaningful outcomes.\n\nThroughout his career as a teacher, principal, and district leader, Dr. Blake has led innovative work in school redesign, social-emotional learning, and early college access. He is also the author of The AI School Leader, a practical guide that helps educators use artificial intelligence to lead with greater efficiency, innovation, and impact while keeping students at the center.",
     social: "IG: @doctor_kool",
-    headshot: "",
+    headshot: "/headshots/dr-william-blake.jpg",
   },
   {
     fullName: "Jarrell Pittman",
