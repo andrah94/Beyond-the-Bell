@@ -62,6 +62,19 @@ const PARTICIPANTS: Participant[] = [
     headshot:
       "https://drive.google.com/file/d/1LiAMl-jN-dNdtSRjq5GdljuN2pNQAr7W/view?usp=drivesdk",
   },
+  {
+    fullName: "Desmond Williams",
+    preferredName: "Desmond",
+    title: "Teacher",
+    school: "Nylinka School Solutions",
+    years: "24",
+    cityState: "Washington, DC",
+    email: "DWilliams@Nylinka.org",
+    phone: "202-258-3349",
+    bio: "Desmond Williams was a teacher and principal in the Washington, DC area for over 20 years. He is committed to supporting Black boys and underserved children. He is also the author of The Burning House: Educating Black Boys in Modern America.",
+    social: "X @Nylinka · Substack @Nylinka · Instagram @Nylinka",
+    headshot: "/headshots/desmond-williams.jpg",
+  },
 ];
 
 // ─── Column header mapping (sheet headers → interface keys) ──────────────────
