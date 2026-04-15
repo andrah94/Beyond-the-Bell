@@ -132,7 +132,17 @@ export default function ProfilesPage() {
       const json = await res.json();
       const rows = Array.isArray(json) ? json : json.data ?? [];
       if (rows.length > 0) {
-        setParticipants(rows.map(normalizeRow));
+        const fetched = rows.map(normalizeRow);
+        // Merge local headshots for participants whose API headshot is empty
+        const localHeadshots = new Map(
+          PARTICIPANTS.filter((p) => p.headshot.startsWith("/")).map((p) => [p.fullName, p.headshot]),
+        );
+        for (const p of fetched) {
+          if (!p.headshot && localHeadshots.has(p.fullName)) {
+            p.headshot = localHeadshots.get(p.fullName)!;
+          }
+        }
+        setParticipants(fetched);
       }
     } catch {
       // API unavailable — keep static data
