@@ -364,6 +364,7 @@ function getHeadshotSrc(headshot: string): string | null {
     return `https://lh3.googleusercontent.com/d/${driveMatch[1]}`;
   }
 
+  if (headshot.startsWith("/")) return headshot;
   if (headshot.startsWith("http")) return headshot;
   if (headshot.startsWith("data:")) return headshot;
   if (headshot.length > 100) return `data:image/jpeg;base64,${headshot}`;
