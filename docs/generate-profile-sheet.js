@@ -109,8 +109,9 @@ function card(p, img) {
     .filter(Boolean)
     .join(" &middot; ");
   const notes = [];
-  if (p["Dietary / Accessibility"]) {
-    notes.push(`<span class="tag"><strong>Dietary/Access:</strong> ${esc(p["Dietary / Accessibility"])}</span>`);
+  const dietary = String(p["Dietary / Accessibility"] || "").trim();
+  if (dietary && !/^(na|n\/a|none|no|n)$/i.test(dietary)) {
+    notes.push(`<span class="tag"><strong>Dietary/Access:</strong> ${esc(dietary)}</span>`);
   }
   const contact = [
     p.phone ? `<span>&#9742; ${esc(formatPhone(p.phone))}</span>` : "",
