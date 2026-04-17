@@ -34,4 +34,12 @@ body {
     border: 1px solid #e4e4e7;
     margin-bottom: 2rem;
   }
+
+  .call-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #e4e4e7;
+    margin-bottom: 1rem;
+  }
 }
