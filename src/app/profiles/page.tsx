@@ -75,6 +75,20 @@ const PARTICIPANTS: Participant[] = [
     social: "X @Nylinka · Substack @Nylinka · Instagram @Nylinka",
     headshot: "/headshots/desmond-williams.jpg",
   },
+  {
+    fullName: "Jacquez Rahdi Jefferson",
+    preferredName: "J. Rahdi Jefferson",
+    title: "8th Grade Action Civics Instructor",
+    school: "E. L. Haynes Public Charter School",
+    years: "10",
+    cityState: "Washington, DC.",
+    email: "jacquezrjefferson@gmail.com",
+    phone: "2409972047",
+    bio: "J. Rahdi Jefferson brings lived experience, creativity, and deep reflection into everything he does—especially the classroom. Many of his fondest memories and personal growth moments were formed in NW/NE DC and Upper Marlboro, MD, places that continue to influence his storytelling and perspective.\n\nInspired to write at a young age, Mr. Jefferson discovered writing as a powerful form of expression. That passion evolved into authorship during his college years at the University of Maryland Eastern Shore and has since grown into a body of work that spans poetry, children’s literature, and reflective prose. To date, he is a self-published author of five books, each rooted in purpose and perspective.\n\nHis educational impact has reached multiple grade levels and his work with students academically has been multicurricular. Currently he teaches 8th grade Action Civics at E. L. Haynes Middle School in NW, DC. He currently serves and studies as an Athari Fellow of the National Association of Black Male Educators.",
+    social: "IG @rahdiboomaye",
+    headshot:
+      "https://drive.google.com/file/d/1q6JTv19nX2mvAD6PO4Z8QUqLq21dwDfQ/view?usp=drivesdk",
+  },
 ];
 
 // ─── Column header mapping (sheet headers → interface keys) ──────────────────
